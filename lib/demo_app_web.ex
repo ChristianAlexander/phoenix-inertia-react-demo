@@ -44,6 +44,7 @@ defmodule DemoAppWeb do
 
       import Plug.Conn
       import DemoAppWeb.Gettext
+      import Inertia.Controller
 
       unquote(verified_routes())
     end
@@ -69,6 +70,7 @@ defmodule DemoAppWeb do
   def html do
     quote do
       use Phoenix.Component
+      import Inertia.HTML
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
