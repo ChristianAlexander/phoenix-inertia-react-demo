@@ -19,6 +19,9 @@ defmodule DemoAppWeb.Router do
     pipe_through :browser
 
     get "/", DemoController, :index
+    get "/groceries", ShoppingController, :index
+    get "/groceries/new", ShoppingController, :new
+    post "/groceries", ShoppingController, :create
   end
 
   # Other scopes may use custom stacks.

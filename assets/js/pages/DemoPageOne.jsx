@@ -1,4 +1,4 @@
-import { router } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import React from 'react';
 
 export default function DemoPageOne({ place, facts }) {
@@ -8,6 +8,15 @@ export default function DemoPageOne({ place, facts }) {
 
   return (
     <>
+      <div className="rounded-md shadow flex items-center gap-x-6 bg-gray-900 px-6 py-2.5 sm:px-3.5 mb-8">
+        <p className="text-sm leading-6 text-white">
+          <Link
+            href='/groceries'
+          >
+            <span>A <strong className="font-semibold">more advanced demo</strong> can be found here!</span>
+          </Link>
+        </p>
+      </div>
       <div className="px-4 sm:px-0">
         <div className="md:flex md:items-center md:justify-between">
           <div>
@@ -25,19 +34,20 @@ export default function DemoPageOne({ place, facts }) {
           </div>
         </div>
       </div>
-      {facts && (
-        <div className="mt-6 border-t border-gray-100">
-          <dl className="divide-y divide-gray-100">
-            {facts.map(fact => (
-              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" key={fact.key}>
-                <dt className="text-sm font-medium leading-6 text-gray-900">{fact.key}</dt>
-                <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      )}
-
+      {
+        facts && (
+          <div className="mt-6 border-t border-gray-100">
+            <dl className="divide-y divide-gray-100">
+              {facts.map(fact => (
+                <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" key={fact.key}>
+                  <dt className="text-sm font-medium leading-6 text-gray-900">{fact.key}</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )
+      }
     </>
   );
 }
