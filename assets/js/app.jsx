@@ -22,12 +22,14 @@ import React from "react";
 import { createInertiaApp } from "@inertiajs/react";
 import { createRoot } from "react-dom/client";
 import axios from "axios";
-import * as pages from "./pages";
 
 axios.defaults.xsrfHeaderName = "x-csrf-token";
 
 createInertiaApp({
-    resolve: (name) => pages[name],
+    resolve: async (name) => {
+        const module = await import(`./pages/${name}.jsx`);
+        return module;
+    },
     setup({ App, el, props }) {
         createRoot(el).render(<App {...props} />);
     },
