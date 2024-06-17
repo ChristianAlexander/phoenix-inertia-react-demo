@@ -1,4 +1,12 @@
-# DemoApp
+# Phoenix / Inertia / React Demo
+
+## Overview
+
+This repository demonstrates how to use the Phoenix Inertia library along with React JS.
+
+It includes code splitting, lazy props, forms with Ecto Changeset validation, and navigation to inspire your exploration!
+
+## Running
 
 To start your Phoenix server:
 
@@ -7,12 +15,5 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+For a more advanced demonstration, head to [`localhost:4000/groceries`](http://localhost:4000/groceries).
+This shows how to interact with a database, forms, and navigation.
