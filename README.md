@@ -6,6 +6,10 @@ This repository demonstrates how to use the Phoenix Inertia library along with R
 
 It includes code splitting, lazy props, forms with Ecto Changeset validation, and navigation to inspire your exploration!
 
+Check out a video demo here:
+
+[![Watch the video](https://img.youtube.com/vi/uyfyFRvng3c/maxresdefault.jpg)](https://youtu.be/uyfyFRvng3c)
+
 ## Running
 
 To start your Phoenix server:
